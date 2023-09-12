@@ -31,5 +31,5 @@ jobs:
         run: echo "DATE=$(TZ=Asia/Kolkata date +'%Y-%m-%d_%H-%M-%S')" >> "$GITHUB_OUTPUT"
       - name: Get color
         env:
-          SELECTED_COLOR: ${{ steps.random-color-generator.outputs.DATE }}
+          DATE: ${{ steps.random-color-generator.outputs.DATE }}
         run: echo "The selected color is $DATE"
